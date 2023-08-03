@@ -1,2 +1,321 @@
+//google fronts
 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@500;700&display=swap');
+  $font-family-sans-serif:  'Poppins', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@200;300;400;500&family=Roboto:wght@500;700&display=swap');
+  $font-family: 'Cormorant Garamond', serif;
+$font-family: 'Roboto', sans-serif;
+//bootstrap from node_module
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.li-bar{
+    width: 1px;
+    background-color: grey;
+    height: 1rem;
+    margin-top: 0.5rem;
+}
+.nav-item{
+  font-size: 1.3rem;
+
+}
+.coustom-dropdown{
+  position: relative;
+}
+.coustom-dropdown:hover ul{
+display: block;
+
+}
+.coustom-dropdown ul{
+  position: absolute;
+  background-color: 0 1px 7px -2px #0000004d;
+  z-index: 200;
+  padding: 8px 12px 10px;
+  display: none;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+// end navbar
+
+#main-carousel .carousel-inner{
+ 
+  height: 500px;
+}
+
+.carousel-control-prev{
+  left: -10rem;
+}
+.carousel-control-next{
+  right: -10rem;
+}
+.carousel-control-prev,
+.carousel-control-next{
+ filter: invert(100%);
+}
+.carousel-item{
+  height: 100%;
+ 
+}
+.carousel-content{
+  width: 100%;
+  height: 100%;
+align-items: center;
+display: flex;
+  
+}
+.carousel-content div{
+  flex: 1;
+}
+.cerousel-text h1{
+  font-size: 6rem;
+  line-height: 7rem;
+  font-weight: 370;
+}
+.btn{
+  padding: 0.7rem 3rem;
+  border: 1px solid;
+  outline: none;
+  margin-top: 2rem;
+  border-radius: none;
+}
+.cerousel-img{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -80px;
+ padding-left: 1rem;
+ padding-right: 1rem;
+ background-color: white;
+ background-size: cover;
+ 
+}
+// end cerousel
+
+// card view
+
+.card-view{
+  position: relative;
+  margin: 2rem 0rem;
+ overflow: hidden;
+ border: 2px solid rgb(247, 239, 239);
+  .card-text{
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 25px;
+    margin-left: 1.5rem;
+   
+  }
+  h3{
+    color: green;
+    font-family:  Cormorant Garamond, serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 30px;
+  }
+  h5{
+   margin: 0px 0px 3.5rem;
+    font-weight: 600;
+    line-height: 24px;
+    font-family:  Cormorant Garamond, serif;
+  }
+  span{
+    color: green;
+    margin-left: .4rem;
+   
+  }
+  a{
+   margin-left: 1rem;
+    color: green;
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+    border: 2px solid green;
+    border-radius: 50%;
+  }
+  &:hover a img{
+    transform: scale(1.2);
+  }
+}
+// Daily Deals 
+.section-title{
+  h2{
+    top: 40px;
+    font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  margin: 0;
+  line-height: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+  &::after, &::before{
+    position: absolute;
+    height: 2px;
+    width: 110px;
+    top: 16px;
+    content: "";
+    background-color: black;
+  }
+  &::after{
+    right: -120px;
+  }
+  &::before{
+    left: -120px;
+  }
+}
+}
+.tab-list{
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  .nav-link{
+    background-color: transparent;
+    display: block;
+  }
+  a h4{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+  }
+}
+// product list
+.product-wrap{
+  position: relative;
+  margin-bottom: 20px;
+  a{
+    line-height: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  .product-img{
+    position: relative;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+    .hover-img{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: 0.5s;
+      transform: translate(-50%, 20px);
+    }
+    .product-icon-text{
+      position: absolute;
+      top: 12px;
+      left: 12px;
+
+      span{
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1;
+         padding: 3px 8px;
+         background-color: #fa6bff;
+         color: white;
+         border-radius: 4px;
+      }
+
+    }
+    .product-action{
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transform: translate(-50%);
+
+      .pro-same-action{
+      
+        display: flex;
+        background-color: #a749ff;
+        align-items: center;
+        height: 40%;
+        transition: 0.3s ease;
+        transform: translateY(30px);
+        visibility: hidden;
+        opacity: 0;
+        
+        button{
+          font-size: 16px;
+          line-height: 40px;
+          width: 100%;
+          text-align: center;
+          color: white;
+          border: none;
+          background: none;
+        }
+        button:hover{
+          background-color: black;
+        }
+      }
+      .pro-wishlist{
+        width: 40px;
+        border-right: 1px solid white;
+        
+      }
+      .pro-card{
+        font-size: 16px;
+        width: 100% -80px;
+        transition-delay: 0.20s;
+      }
+      .pro-preview{
+        width: 40px;
+        transition-delay: 0.25s;
+        border-left: 1px solid white;
+      }
+    }
+  }
+.product-content{
+  h3{
+    font-size: 18px;
+    margin: 1.7rem 0 0 0;
+  }
+  .product-rating{
+    margin: 2rx 0px;
+  }
+ .product-price span{
+font-size: 16px;
+font-weight: 400;
+margin: 0 1rem;
+color: black;
+position: relative;
+ }
+ .product-price span::after{
+  position: absolute;
+  top: 10px;
+  right: -1rem;
+  width: 1rem;
+  height: 2px;
+  content: "";
+  background-color: black;
+ }
+ .product-price span.old{
+  color: gray;
+  text-decoration: line-through;
+ }
+ .product-price span.old:after{
+  content: "";
+  display: none;
+ }
+}
+
+  &:hover .hover-img{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    transform: translate(-50%, 20px);
+
+  }
+  &:hover .product-action > .pro-same-action{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
